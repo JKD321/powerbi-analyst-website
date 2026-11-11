@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jonathan Dunne | Power BI Analyst</title>
   <meta name="description" content="Power BI portfolio showcasing business intelligence, data analysis and property analytics projects.">
-
   <style>
     :root {
       --background: #101b2a;
@@ -16,76 +16,29 @@
       --muted: #aab8c4;
       --border: #304356;
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: var(--background);
       color: var(--text);
       line-height: 1.7;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1120px, 90%);
-      margin: auto;
-    }
-
-    header {
-      border-bottom: 1px solid var(--border);
-      padding: 22px 0;
-    }
-
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, 90%); margin: auto; }
+    header { border-bottom: 1px solid var(--border); padding: 22px 0; }
     .navigation {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
     }
-
-    .logo {
-      font-size: 19px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: var(--teal);
-    }
-
-    nav {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: var(--teal);
-    }
-
-    .hero {
-      padding: 105px 0 95px;
-      max-width: 780px;
-    }
-
+    .logo { font-size: 19px; font-weight: bold; letter-spacing: 1px; }
+    .logo span { color: var(--teal); }
+    nav { display: flex; gap: 25px; flex-wrap: wrap; }
+    nav a { color: var(--muted); font-size: 14px; }
+    nav a:hover { color: var(--teal); }
+    .hero { padding: 105px 0 95px; max-width: 780px; }
     .eyebrow {
       color: var(--teal);
       text-transform: uppercase;
@@ -94,24 +47,18 @@
       font-weight: bold;
       margin-bottom: 20px;
     }
-
     h1 {
       font-size: clamp(38px, 6vw, 62px);
       line-height: 1.15;
       margin-bottom: 25px;
     }
-
-    h1 span {
-      color: var(--teal);
-    }
-
+    h1 span { color: var(--teal); }
     .hero p {
       color: var(--muted);
       font-size: 18px;
       max-width: 680px;
       margin-bottom: 32px;
     }
-
     .button {
       display: inline-block;
       background: var(--teal);
@@ -121,36 +68,16 @@
       font-weight: bold;
       font-size: 14px;
     }
-
-    .button:hover {
-      background: #8acbc3;
-    }
-
-    section {
-      padding: 75px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .section-heading {
-      margin-bottom: 38px;
-    }
-
-    h2 {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .section-heading p {
-      color: var(--muted);
-      max-width: 680px;
-    }
-
+    .button:hover { background: #8acbc3; }
+    section { padding: 75px 0; border-top: 1px solid var(--border); }
+    .section-heading { margin-bottom: 38px; }
+    h2 { font-size: 30px; margin-bottom: 10px; }
+    .section-heading p { color: var(--muted); max-width: 680px; }
     .project-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
-
     .project-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -158,83 +85,46 @@
       padding: 25px;
       transition: transform 0.2s, border-color 0.2s;
     }
-
     .project-card:hover {
       transform: translateY(-4px);
       border-color: var(--teal);
     }
-
     .project-number {
       color: var(--teal);
       font-size: 12px;
       letter-spacing: 1px;
       margin-bottom: 15px;
     }
-
-    .project-card h3 {
-      font-size: 19px;
-      margin-bottom: 12px;
+    .project-card h3 { font-size: 19px; margin-bottom: 12px; }
+    .project-card h3 a:hover,
+    .property-card h3 a:hover { color: var(--teal); }
+    .project-card img {
+      width: 100%;
+      border-radius: 6px;
+      margin: 12px 0;
+      display: block;
     }
-
-    .project-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .property-section {
-      background: #142638;
-    }
-
-    .property-intro {
-      max-width: 760px;
-      margin-bottom: 35px;
-    }
-
-    .property-intro p {
-      color: var(--muted);
-    }
-
+    .project-card p { color: var(--muted); font-size: 14px; }
+    .property-section { background: #142638; }
+    .property-intro { max-width: 760px; margin-bottom: 35px; }
+    .property-intro p { color: var(--muted); }
     .property-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
-
     .property-card {
       background: var(--surface-light);
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 30px;
     }
-
-    .property-card h3 {
-      font-size: 21px;
-      margin-bottom: 12px;
-    }
-
-    .property-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .about-content {
-      max-width: 760px;
-    }
-
-    .about-content p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .contact-section {
-      text-align: center;
-    }
-
-    .contact-section p {
-      color: var(--muted);
-      margin-bottom: 25px;
-    }
-
+    .property-card h3 { font-size: 21px; margin-bottom: 12px; }
+    .property-card p { color: var(--muted); font-size: 14px; }
+    .about-content { max-width: 760px; }
+    .about-content p { color: var(--muted); margin-bottom: 18px; }
+    .contact-section { text-align: center; }
+    .contact-section p { color: var(--muted); margin-bottom: 25px; }
     footer {
       border-top: 1px solid var(--border);
       padding: 25px 0;
@@ -242,41 +132,21 @@
       font-size: 13px;
       text-align: center;
     }
-
     @media (max-width: 800px) {
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .project-grid { grid-template-columns: repeat(2, 1fr); }
     }
-
     @media (max-width: 560px) {
-      .navigation {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .project-grid,
-      .property-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 75px 0;
-      }
-
-      nav {
-        gap: 15px;
-      }
+      .navigation { align-items: flex-start; flex-direction: column; }
+      .project-grid, .property-grid { grid-template-columns: 1fr; }
+      .hero { padding: 75px 0; }
+      nav { gap: 15px; }
     }
   </style>
 </head>
-
 <body>
-
   <header>
     <div class="container navigation">
       <a href="#" class="logo">JD<span>.</span> ANALYTICS</a>
-
       <nav>
         <a href="#projects">Projects</a>
         <a href="#property">Property Analytics</a>
@@ -287,19 +157,15 @@
   </header>
 
   <main>
-
     <div class="container">
       <div class="hero">
         <div class="eyebrow">Power BI · Business Intelligence · Data Analysis</div>
-
         <h1>Turning data into <span>meaningful insight.</span></h1>
-
         <p>
           I develop Power BI projects that explore business questions,
           uncover patterns and turn data into clearer information
           for better decision-making.
         </p>
-
         <a class="button" href="#projects">Explore my projects</a>
       </div>
     </div>
@@ -319,86 +185,82 @@
 
           <article class="project-card">
             <div class="project-number">PROJECT 01</div>
-            <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/Executive%20Dashboard.png"
-     alt="Finance Executive Summary Power BI dashboard"
-     style="width:100%; border-radius:6px; margin:12px 0;">
-            <h3>Finance Executive Summary</h3>
+            <a href="https://github.com/JKD321/powerbi-portfolio/blob/main/projects/Executive%20Summary%20-Finance%20Report.pbix" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/Executive%20Dashboard.png" alt="Finance Executive Summary Power BI dashboard">
+            </a>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/blob/main/projects/Executive%20Summary%20-Finance%20Report.pbix" target="_blank" rel="noopener noreferrer">Finance Executive Summary</a></h3>
             <p>Exploring financial performance, key indicators and business results through an executive reporting dashboard.</p>
           </article>
 
           <article class="project-card">
             <div class="project-number">PROJECT 02</div>
-            <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/hr-employee-dashboard.png"
-alt="HR Analytics Dashboard"
-style="width:100%; border-radius:6px; margin:12px 0;">
-            <h3>HR Analytics Dashboard</h3>
+            <a href="https://github.com/JKD321/powerbi-portfolio/blob/main/projects/HR%20Dashboard.pbix" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/hr-employee-dashboard.png" alt="HR Analytics Dashboard">
+            </a>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/blob/main/projects/HR%20Dashboard.pbix" target="_blank" rel="noopener noreferrer">HR Analytics Dashboard</a></h3>
             <p>Investigating workforce information and identifying patterns in employee data.</p>
           </article>
 
           <article class="project-card">
             <div class="project-number">PROJECT 03</div>
-            <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/premier-league-defender-analysis.png"
-alt="Premier League Defender Analysis"
-style="width:100%; border-radius:6px; margin:12px 0;">
-            <h3>Premier League Defender Analysis</h3>
+            <a href="https://github.com/JKD321/powerbi-portfolio/blob/main/projects/Premier_League_Defender_Analysis.pbix" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/premier-league-defender-analysis.png" alt="Premier League Defender Analysis">
+            </a>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/blob/main/projects/Premier_League_Defender_Analysis.pbix" target="_blank" rel="noopener noreferrer">Premier League Defender Analysis</a></h3>
             <p>Examining defensive performance and asking whether expensive defenders represent good value.</p>
           </article>
 
           <article class="project-card">
             <div class="project-number">PROJECT 04</div>
-            <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/messi-ronaldo-club-stats.png"
-alt="Messi vs Ronaldo Club Statistics"
-style="width:100%; border-radius:6px; margin:12px 0;">
-            <h3>Messi vs Ronaldo</h3>
+            <a href="https://github.com/JKD321/powerbi-portfolio/blob/main/RonvMes.pbix" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/messi-ronaldo-club-stats.png" alt="Messi vs Ronaldo Club Statistics">
+            </a>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/blob/main/RonvMes.pbix" target="_blank" rel="noopener noreferrer">Messi vs Ronaldo</a></h3>
             <p>Comparing two exceptional football careers through goals, assists and major honours.</p>
           </article>
 
           <article class="project-card">
             <div class="project-number">PROJECT 05</div>
-            <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/mermaid-myth-index.png"
-alt="Mermaid Myth Index Dashboard"
-style="width:100%; border-radius:6px; margin:12px 0;">
-            <h3>Mermaid Myth Index</h3>
+            <a href="https://github.com/JKD321/powerbi-portfolio/blob/main/projects/Mermaid%20Myths.pbix" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/mermaid-myth-index.png" alt="Mermaid Myth Index Dashboard">
+            </a>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/blob/main/projects/Mermaid%20Myths.pbix" target="_blank" rel="noopener noreferrer">Mermaid Myth Index</a></h3>
             <p>A light-hearted exploration of folklore, reported sightings and an unusual dataset.</p>
           </article>
 
           <article class="project-card">
             <div class="project-number">PROJECT 06</div>
-            <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/nyc-tree-census-analysis.png"
-alt="NYC Tree Census Analysis"
-style="width:100%; border-radius:6px; margin:12px 0;">
-            <h3>NYC Tree Census Analysis</h3>
+            <a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/v2.0" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/nyc-tree-census-analysis.png" alt="NYC Tree Census Analysis">
+            </a>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/v2.0" target="_blank" rel="noopener noreferrer">NYC Tree Census Analysis</a></h3>
             <p>Investigating tree health, reported problems and differences across New York boroughs.</p>
           </article>
 
           <article class="project-card">
             <div class="project-number">PROJECT 07</div>
-            <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/emerald-property-management.png"
-alt="Emerald Property Management Dashboard"
-style="width:100%; border-radius:6px; margin:12px 0;">
-            <h3>Emerald Property Management</h3>
+            <a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/property-v1.0" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/emerald-property-management.png" alt="Emerald Property Management Dashboard">
+            </a>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/property-v1.0" target="_blank" rel="noopener noreferrer">Emerald Property Management</a></h3>
             <p>Exploring rental income, maintenance expenditure and property management performance.</p>
           </article>
 
           <article class="project-card">
             <div class="project-number">PROJECT 08</div>
-            <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/Dublin%20Rent%20Overview.png"
-alt="Dublin Rental Market Analysis Dashboard"
-style="width:100%; border-radius:6px; margin:12px 0;">
-            <h3>Dublin Rental Market Analysis</h3>
+            <a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/dublin-rents-v1.0" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/Dublin%20Rent%20Overview.png" alt="Dublin Rental Market Analysis Dashboard">
+            </a>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/dublin-rents-v1.0" target="_blank" rel="noopener noreferrer">Dublin Rental Market Analysis</a></h3>
             <p>Investigating rental market patterns and the relationship between rents and household spending.</p>
           </article>
 
           <article class="project-card">
             <div class="project-number">PROJECT 09</div>
- <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/Gold-Indicators.png"
-alt="Gold and Macroeconomic Indicators Dashboard"
-style="width:100%; border-radius:6px; margin:12px 0;">
-            <h3>
-  <a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/gold-price-v1.0" target="_blank" rel="noopener noreferrer">
-    The Price of Gold
-  </a>
-</h3>
+            <a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/gold-price-v1.0" target="_blank" rel="noopener noreferrer">
+              <img src="https://raw.githubusercontent.com/JKD321/powerbi-portfolio/main/assets/Gold-Indicators.png" alt="Gold and Macroeconomic Indicators Dashboard">
+            </a>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/gold-price-v1.0" target="_blank" rel="noopener noreferrer">The Price of Gold</a></h3>
             <p>Exploring gold prices, market drivers, economic events and unusual movements over time.</p>
           </article>
 
@@ -408,7 +270,6 @@ style="width:100%; border-radius:6px; margin:12px 0;">
 
     <section class="property-section" id="property">
       <div class="container">
-
         <div class="property-intro">
           <div class="eyebrow">Developing a specialism</div>
           <h2>Property Analytics</h2>
@@ -420,19 +281,17 @@ style="width:100%; border-radius:6px; margin:12px 0;">
         </div>
 
         <div class="property-grid">
-
           <article class="property-card">
             <div class="project-number">PROPERTY PROJECT 01</div>
-            <h3>Emerald Property Management</h3>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/property-v1.0" target="_blank" rel="noopener noreferrer">Emerald Property Management</a></h3>
             <p>Understanding income, expenditure, occupancy and the financial performance of a property portfolio.</p>
           </article>
 
           <article class="property-card">
             <div class="project-number">PROPERTY PROJECT 02</div>
-            <h3>Dublin Rental Market Analysis</h3>
+            <h3><a href="https://github.com/JKD321/powerbi-portfolio/releases/tag/dublin-rents-v1.0" target="_blank" rel="noopener noreferrer">Dublin Rental Market Analysis</a></h3>
             <p>Exploring rental trends and market conditions through data-driven analysis.</p>
           </article>
-
         </div>
       </div>
     </section>
@@ -442,13 +301,11 @@ style="width:100%; border-radius:6px; margin:12px 0;">
         <div class="about-content">
           <div class="eyebrow">A little about my approach</div>
           <h2>Analysis before decoration.</h2>
-
           <p>
             My focus is on understanding the question behind the data.
             A dashboard should do more than display numbers: it should
             help people understand what is happening and why it matters.
           </p>
-
           <p>
             Each project is an opportunity to develop my technical
             skills, improve my analytical thinking and communicate
@@ -463,23 +320,17 @@ style="width:100%; border-radius:6px; margin:12px 0;">
         <div class="eyebrow">Explore my work</div>
         <h2>View the project portfolio</h2>
         <p>Visit GitHub to explore the Power BI projects and supporting material.</p>
-
-        <a class="button"
-           href="https://github.com/JKD321/powerbi-portfolio"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a class="button" href="https://github.com/JKD321/powerbi-portfolio" target="_blank" rel="noopener noreferrer">
           Visit GitHub Portfolio
         </a>
       </div>
     </section>
-
   </main>
 
   <footer>
     <div class="container">
-      © 2026 Jonathan Dunne · Power BI & Business Intelligence
+      © 2026 Jonathan Dunne · Power BI &amp; Business Intelligence
     </div>
   </footer>
-
 </body>
 </html>
